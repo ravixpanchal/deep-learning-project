@@ -1,0 +1,4 @@
+pandas
+pdf2image
+PIL
+

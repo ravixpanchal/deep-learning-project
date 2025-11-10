@@ -1,0 +1,101 @@
+1. Resnet18 Model and complete raw data 
+
+    Best Validation Accuracy: 69.57%
+
+    Confusion Matrix:
+    [[57  0  0]
+    [19  5  0]
+    [ 9  0  2]]
+
+    Classification Report:
+                    precision    recall  f1-score   support
+
+    RawOutput_jpg1       0.67      1.00      0.80        57
+    RawOutput_jpg2       1.00      0.21      0.34        24
+    RawOutput_jpg3       1.00      0.18      0.31        11
+
+        accuracy                           0.70        92
+        macro avg       0.89      0.46      0.49        92
+    weighted avg       0.80      0.70      0.62        92
+
+2. Resnet18 Model and synthetic + raw data 
+
+    Best Validation Accuracy: 87.08%
+
+    Confusion Matrix:
+    [[56  2  0]
+    [15 42  3]
+    [ 0  3 57]]
+
+    Classification Report:
+                precision    recall  f1-score   support
+
+    output_jpg       0.79      0.97      0.87        58
+    output_jpg2       0.89      0.70      0.79        60
+    output_jpg3       0.95      0.95      0.95        60
+
+        accuracy                           0.87       178
+    macro avg       0.88      0.87      0.87       178
+    weighted avg       0.88      0.87      0.87       178
+
+
+3. Without synthic genertaion for class 2 with weights only
+
+    Best Validation Accuracy: 79.43%
+
+    Confusi on Matrix:
+    [[41 16  0]
+    [ 7 17  0]
+    [ 1  6 53]]
+
+    Classification Report:
+                precision    recall  f1-score   support
+
+    output_jpg       0.84      0.72      0.77        57
+    output_jpg2       0.44      0.71      0.54        24
+    output_jpg3       1.00      0.88      0.94        60
+
+    accuracy                           0.79       141
+    macro avg       0.76      0.77      0.75       141
+    weighted avg       0.84      0.79      0.80       141
+
+4. EfficientNet-B0 + CutMix + Fine-tuning + EMA + TTA with Processed data
+
+    Best Validation Accuracy: 83.71%
+
+    Confusion Matrix:
+    [[ 0  0 58]
+    [ 0 10 50]
+    [ 0  5 55]]
+
+    Classification Report:
+                precision    recall  f1-score   support
+
+    output_jpg       0.00      0.00      0.00        58
+    output_jpg2       0.67      0.17      0.27        60
+    output_jpg3       0.34      0.92      0.49        60
+
+        accuracy                           0.37       178
+    macro avg       0.33      0.36      0.25       178
+    weighted avg       0.34      0.37      0.26       178
+
+
+5. EfficientNet-B0 + CutMix + Fine-tuning + EMA + TTA with Raw data
+
+    Best Validation Accuracy: 38.04%
+
+    Confusion Matrix:
+    [[ 2 11 44]
+    [ 1  3 20]
+    [ 0  3  8]]
+
+    Classification Report:
+                    precision    recall  f1-score   support
+
+    RawOutput_jpg1       0.67      0.04      0.07        57
+    RawOutput_jpg2       0.18      0.12      0.15        24
+    RawOutput_jpg3       0.11      0.73      0.19        11
+
+        accuracy                           0.14        92
+        macro avg       0.32      0.30      0.14        92
+    weighted avg       0.47      0.14      0.10        92
